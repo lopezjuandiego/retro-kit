@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import type { RetromatActivity, LiberatingStructure, RetroFormData, RetroAgenda, AgendaItem } from '@/types'
+import type { RetroFormData, RetroAgenda, AgendaItem } from '@/types'
 
 describe('Forma de RetroFormData', () => {
   it('acepta todos los valores válidos de los campos', () => {

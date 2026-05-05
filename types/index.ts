@@ -1,17 +1,17 @@
 // types/index.ts
 
-export type RetroPhase = 1 | 2 | 3 | 4 | 5
+export type RetroPhase = 0 | 1 | 2 | 3 | 4 | 5
 
 export interface RetromatActivity {
-  id: number
+  retromatId: number
   name: string
   summary: string
   desc: string
   duration: string
   phase: RetroPhase
-  suitable?: string
   source?: string
-  tags?: string[]
+  stage?: string
+  forumUrl?: string
 }
 
 export interface LiberatingStructure {
