@@ -1,0 +1,332 @@
+[
+  {
+    "id": "1-2-4-all",
+    "name": "1-2-4-All",
+    "summary": "Involucra a todos simultáneamente para generar preguntas, ideas y sugerencias",
+    "purpose": "Eliminar el pensamiento grupal y dar voz a todos por igual",
+    "duration": "12 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["inicio de sesión", "generar ideas", "participación equitativa", "romper el hielo"],
+    "pasos": "1 min reflexión individual → 2 min en pares → 4 min en grupos de 4 → compartir en plenario"
+  },
+  {
+    "id": "triz",
+    "name": "TRIZ",
+    "summary": "Identifica y destruye acciones contraproducentes antes de innovar",
+    "purpose": "Liberar recursos atrapados en prácticas que sabotean el éxito",
+    "duration": "25-70 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["cambio cultural", "eliminar obstáculos", "retrospectiva profunda", "problemas sistémicos"],
+    "pasos": "¿Qué haríamos para garantizar el peor resultado? → ¿Qué hacemos que se parece a eso? → ¿Qué podemos dejar de hacer?"
+  },
+  {
+    "id": "15-percent-solutions",
+    "name": "15% Solutions",
+    "summary": "Descubre lo que puedes hacer ahora sin más recursos ni autorización",
+    "purpose": "Generar acción concreta dentro de tu esfera de control",
+    "duration": "20-30 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["decidir acciones", "bloqueos", "falta de iniciativa", "cierre de sesión"],
+    "pasos": "¿Cuál es tu 15% de libertad de acción? → Compartir en pares → Compromisos concretos"
+  },
+  {
+    "id": "troika-consulting",
+    "name": "Troika Consulting",
+    "summary": "Los compañeros se consultan mutuamente en tríos rotativos",
+    "purpose": "Generar ayuda concreta de pares para problemas reales",
+    "duration": "30 min",
+    "groupSize": "múltiplos de 3",
+    "when_to_use": ["problemas complejos", "coaching entre pares", "bloqueos individuales"],
+    "pasos": "Presentar problema (2 min) → Preguntas clarificadoras → Dar la espalda → Consultores proponen ideas → Reflexión"
+  },
+  {
+    "id": "winfy",
+    "name": "What I Need From You (WINFY)",
+    "summary": "Expresa necesidades claras entre roles y recibe compromisos explícitos",
+    "purpose": "Clarificar necesidades interdepartamentales y compromisos",
+    "duration": "55-70 min",
+    "groupSize": "5-25 personas",
+    "when_to_use": ["fricción entre equipos", "expectativas poco claras", "coordinación", "dependencias"],
+    "pasos": "Identificar necesidades por rol → Votar las más importantes → Cada rol responde: sí / no / más info"
+  },
+  {
+    "id": "open-space-technology",
+    "name": "Open Space Technology",
+    "summary": "Participantes crean y gestionan su propia agenda alrededor de un tema central",
+    "purpose": "Liberar energía y creatividad colectiva sin agenda predefinida",
+    "duration": "90 min - varios días",
+    "groupSize": "5-2000 personas",
+    "when_to_use": ["temas complejos", "comunidades grandes", "innovación", "conferencias internas"],
+    "pasos": "Proponer sesiones → Votación con los pies → Sesiones paralelas → Cierre con compromisos"
+  },
+  {
+    "id": "appreciative-interviews",
+    "name": "Appreciative Interviews (AI)",
+    "summary": "Descubre las condiciones que producen el mejor desempeño a través de entrevistas en pares",
+    "purpose": "Amplificar lo que ya funciona bien en el equipo",
+    "duration": "25-70 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["inicio de retro", "team building", "identificar fortalezas", "motivación baja"],
+    "pasos": "Contar un éxito reciente → ¿Qué condiciones lo hicieron posible? → Compartir temas comunes"
+  },
+  {
+    "id": "wicked-questions",
+    "name": "Wicked Questions",
+    "summary": "Formula las paradojas que el grupo debe manejar para tener éxito",
+    "purpose": "Revelar tensiones estratégicas sin buscar soluciones rápidas",
+    "duration": "25-50 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["tensiones del equipo", "decisiones difíciles", "estrategia", "cambio organizacional"],
+    "pasos": "¿Cómo podemos hacer A y simultáneamente B? → Cada par presenta su pregunta → Votar las más reveladoras"
+  },
+  {
+    "id": "heard-seen-respected",
+    "name": "Heard, Seen, Respected (HSR)",
+    "summary": "Practica empatía profunda y reconoce la experiencia de los demás",
+    "purpose": "Construir confianza y sanar rupturas en el equipo",
+    "duration": "35-60 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["conflictos", "falta de confianza", "team building", "experiencias difíciles"],
+    "pasos": "Contar una experiencia de no sentirse escuchado → Escucha sin interrupciones → Reflexión grupal"
+  },
+  {
+    "id": "nine-whys",
+    "name": "Nine Whys",
+    "summary": "Examina el propósito profundo del trabajo a través de una cadena de 'por qués'",
+    "purpose": "Conectar actividades cotidianas con el propósito más profundo",
+    "duration": "20 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["inicio de retro", "pérdida de sentido", "alineación de equipo", "definir valores"],
+    "pasos": "¿Qué hacés? → ¿Por qué es importante? → Repetir 9 veces → Compartir el propósito revelado"
+  },
+  {
+    "id": "25-10-crowdsourcing",
+    "name": "25/10 Crowd Sourcing",
+    "summary": "Genera y selecciona ideas audaces rápidamente en grupos grandes",
+    "purpose": "Priorizar colectivamente sin debates interminables",
+    "duration": "25-30 min",
+    "groupSize": "10+ personas",
+    "when_to_use": ["generación de ideas", "priorización", "retrospectivas grandes", "brainstorming"],
+    "pasos": "Escribir idea audaz → Pasarla 5 veces puntuando 1-5 → Sumar puntajes → Top 10"
+  },
+  {
+    "id": "shift-and-share",
+    "name": "Shift & Share",
+    "summary": "Comparte innovaciones locales con todo el grupo en estaciones rotativas",
+    "purpose": "Difundir conocimiento y aprendizajes entre subgrupos",
+    "duration": "45-90 min",
+    "groupSize": "15-150 personas",
+    "when_to_use": ["compartir aprendizajes", "mejores prácticas", "comunidades de práctica"],
+    "pasos": "5 estaciones con expertos → Grupos rotan → Cada experto presenta 7 min → Reflexión"
+  },
+  {
+    "id": "min-specs",
+    "name": "Min Specs",
+    "summary": "Define las reglas mínimas indispensables para lograr el objetivo",
+    "purpose": "Distinguir lo esencial de la burocracia y la tradición",
+    "duration": "35-50 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["definir acuerdos de equipo", "simplificar procesos", "working agreements"],
+    "pasos": "¿Qué debemos hacer / no hacer? → Votar candidatos → Eliminar todo lo que no sea esencial"
+  },
+  {
+    "id": "improv-prototyping",
+    "name": "Improv Prototyping",
+    "summary": "Usa juego de roles iterativo para resolver situaciones complejas",
+    "purpose": "Explorar soluciones con el cuerpo, no solo con la mente",
+    "duration": "30-70 min",
+    "groupSize": "5-30 personas",
+    "when_to_use": ["problemas de comunicación", "situaciones difíciles", "mejorar interacciones"],
+    "pasos": "Presentar situación difícil → Improvisar solución → Grupo sugiere mejoras → Repetir"
+  },
+  {
+    "id": "helping-heuristics",
+    "name": "Helping Heuristics",
+    "summary": "Practica modos de ayudar que realmente funcionan entre pares",
+    "purpose": "Mejorar cómo los miembros del equipo se apoyan mutuamente",
+    "duration": "30-60 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["mejorar colaboración", "coaching interno", "dependencias de equipo"],
+    "pasos": "Presentar situación → Practicar: solo escuchar / hacer preguntas / dar consejo solo si se pide"
+  },
+  {
+    "id": "generative-relationships-star",
+    "name": "Generative Relationships STAR",
+    "summary": "Evalúa la calidad de las relaciones del equipo en 4 dimensiones",
+    "purpose": "Ver qué patrones relacionales están limitando al equipo",
+    "duration": "35-60 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["diagnóstico de equipo", "fricción interna", "mejorar colaboración"],
+    "pasos": "Puntuar: separación-unión / conformidad-diversidad / silos-interconexión / dependencia-interdependencia → Discutir"
+  },
+  {
+    "id": "discovery-action-dialogue",
+    "name": "Discovery & Action Dialogue (DAD)",
+    "summary": "Descubre soluciones locales que ya existen y escálalas",
+    "purpose": "Aprovechar el conocimiento tácito del equipo para resolver problemas",
+    "duration": "30-70 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["problemas persistentes", "mejora de procesos", "conocimiento tácito"],
+    "pasos": "¿Cómo sabés que el problema existe? → ¿Qué impide resolverlo? → ¿Conocés a alguien que ya lo resolvió? → Próximos pasos"
+  },
+  {
+    "id": "drawing-together",
+    "name": "Drawing Together",
+    "summary": "Usa 5 símbolos universales para expresar lo que el lenguaje no puede capturar",
+    "purpose": "Revelar patrones y perspectivas más allá de las palabras",
+    "duration": "30-60 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["creatividad", "visión de futuro", "reflexión profunda", "equipos creativos"],
+    "pasos": "Dibujar: círculo / triángulo / espiral / corazón / estrella + descripción → Compartir significados"
+  },
+  {
+    "id": "design-storyboards",
+    "name": "Design StoryBoards",
+    "summary": "Prototipa experiencias usando storyboards visuales antes de construir",
+    "purpose": "Hacer visible el flujo de experiencia del usuario o proceso",
+    "duration": "25-70 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["diseño de procesos", "experiencia de usuario", "planificación", "innovación"],
+    "pasos": "Definir pasos de la experiencia → Dibujar cada paso → Comparar storyboards → Integrar ideas"
+  },
+  {
+    "id": "celebrity-interview",
+    "name": "Celebrity Interview",
+    "summary": "Un experto es entrevistado por un 'periodista' del grupo",
+    "purpose": "Transmitir conocimiento de forma dinámica centrada en preguntas reales",
+    "duration": "30-60 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["compartir conocimiento", "onboarding", "transferencia de experiencia"],
+    "pasos": "Periodista prepara preguntas con el grupo → Entrevista pública 20 min → Q&A → Reflexión"
+  },
+  {
+    "id": "social-network-webbing",
+    "name": "Social Network Webbing",
+    "summary": "Visualiza las conexiones informales que hacen funcionar al equipo",
+    "purpose": "Identificar nodos de conocimiento y cuellos de botella relacionales",
+    "duration": "35-60 min",
+    "groupSize": "10-50 personas",
+    "when_to_use": ["mapeo de dependencias", "silos", "comunicación", "reorganización"],
+    "pasos": "Nodos en papel → Dibujar conexiones → Identificar hubs y aislados → ¿Qué cambiaríamos?"
+  },
+  {
+    "id": "what-so-what-now-what",
+    "name": "What? So What? Now What? (W³)",
+    "summary": "Convierte observaciones en aprendizaje accionable en tres preguntas",
+    "purpose": "Reflexionar sin quedarse en el relato ni en conclusiones abstractas",
+    "duration": "45 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["cierre de sprint", "after action review", "aprendizaje", "retrospectiva rápida"],
+    "pasos": "¿Qué ocurrió? (hechos) → ¿Y entonces? (significado) → ¿Ahora qué? (acción)"
+  },
+  {
+    "id": "simple-ethnography",
+    "name": "Simple Ethnography",
+    "summary": "Observa el trabajo en su contexto real para entenderlo verdaderamente",
+    "purpose": "Recopilar datos de campo antes de asumir o decidir",
+    "duration": "1-2 horas",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["investigación", "mejora de procesos", "entender problemas raíz"],
+    "pasos": "Definir qué observar → Observar sin intervenir → Registrar → Sintetizar hallazgos"
+  },
+  {
+    "id": "integrated-autonomy",
+    "name": "Integrated~Autonomy",
+    "summary": "Explora la paradoja entre integración y autonomía en decisiones reales",
+    "purpose": "Navegar tensiones entre estandarización y flexibilidad local",
+    "duration": "40-70 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["escalado", "descentralización", "conflictos de autoridad", "agilidad organizacional"],
+    "pasos": "Listar decisiones → Ubicar en eje integrado-autónomo → Debate → ¿Dónde queremos estar?"
+  },
+  {
+    "id": "agree-disagree-decide",
+    "name": "Agree, Disagree & Decide",
+    "summary": "Toma decisiones explícitas después de explorar el espacio de acuerdo y desacuerdo",
+    "purpose": "Evitar falsas mayorías y compromisos sin convicción",
+    "duration": "20-40 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["toma de decisiones", "conflictos", "priorización", "working agreements"],
+    "pasos": "Propuesta → Todos se posicionan → Debate de desacuerdos → Decisión explícita"
+  },
+  {
+    "id": "share-my-wisdom",
+    "name": "Share My Wisdom",
+    "summary": "Extrae y comparte lecciones aprendidas al final de una experiencia significativa",
+    "purpose": "Capturar conocimiento antes de que se disperse",
+    "duration": "30-45 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["cierre de proyecto", "offboarding", "retrospectiva de proyecto"],
+    "pasos": "Reflexión individual sobre lecciones → Compartir en pares → Sintetizar en plenario"
+  },
+  {
+    "id": "mad-tea-party",
+    "name": "Mad Tea Party",
+    "summary": "Conversaciones rápidas rotativas con preguntas provocadoras",
+    "purpose": "Generar energía y múltiples perspectivas en poco tiempo",
+    "duration": "20-30 min",
+    "groupSize": "10+ personas",
+    "when_to_use": ["inicio de sesión", "energía baja", "múltiples perspectivas", "romper silos"],
+    "pasos": "Círculos concéntricos → Pregunta provocadora → 2 min de conversación → Rotar → Reflexión"
+  },
+  {
+    "id": "purpose-to-practice",
+    "name": "Purpose-To-Practice (P2P)",
+    "summary": "Diseña una nueva iniciativa desde el propósito hasta las prácticas concretas",
+    "purpose": "Alinear propósito, principios, participantes, estructura y prácticas",
+    "duration": "120-180 min",
+    "groupSize": "5-40 personas",
+    "when_to_use": ["lanzamiento de equipo", "nueva iniciativa", "rediseño organizacional"],
+    "pasos": "Propósito → Principios → Participantes → Estructura → Prácticas → Compromisos"
+  },
+  {
+    "id": "windup-dialogue",
+    "name": "Windup Dialogue",
+    "summary": "Cierra la sesión con una reflexión estructurada sobre lo aprendido",
+    "purpose": "Solidificar aprendizajes y compromisos antes de terminar",
+    "duration": "15-20 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["cierre de retro", "cierre de taller", "consolidar aprendizajes"],
+    "pasos": "¿Qué aprendí? → ¿Qué me llevo? → ¿A qué me comprometo? → Ronda final"
+  },
+  {
+    "id": "user-experience-fishbowl",
+    "name": "User Experience Fishbowl",
+    "summary": "Un usuario cuenta su experiencia mientras el equipo observa y aprende",
+    "purpose": "Generar empatía profunda con la experiencia real del usuario",
+    "duration": "35-60 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["feedback de usuario", "empatía", "mejora de producto", "customer focus"],
+    "pasos": "Usuario en centro → Cuenta su experiencia → Equipo observa → Preguntas → Reflexión"
+  },
+  {
+    "id": "ecocycle-planning",
+    "name": "Ecocycle Planning",
+    "summary": "Visualiza el ciclo de vida de actividades para liberar recursos hacia la innovación",
+    "purpose": "Identificar qué destruir, qué mantener y qué crear",
+    "duration": "65-90 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["planificación", "gestión del cambio", "priorización estratégica", "retrospectiva de proyecto"],
+    "pasos": "Listar actividades → Ubicar en ciclo (nacimiento / madurez / trampa / destrucción creativa) → Decisiones"
+  },
+  {
+    "id": "spec-is-not",
+    "name": "Spec's & Specs (ES / NO ES)",
+    "summary": "Aclara límites de alcance definiendo qué está dentro y fuera",
+    "purpose": "Alinear expectativas antes de empezar a trabajar en algo",
+    "duration": "20-40 min",
+    "groupSize": "cualquier tamaño",
+    "when_to_use": ["definir alcance", "alinear expectativas", "inicio de proyecto", "planning"],
+    "pasos": "¿Qué ES nuestro objetivo? → ¿Qué NO ES? → ¿Qué AÚN NO SABEMOS? → Validar con el grupo"
+  },
+  {
+    "id": "conversation-cafe",
+    "name": "Conversation Café",
+    "summary": "Facilita conversaciones profundas sobre temas complejos sin agenda rígida",
+    "purpose": "Explorar temas difíciles con apertura y sin buscar consenso forzado",
+    "duration": "35-60 min",
+    "groupSize": "5-8 por mesa",
+    "when_to_use": ["temas difíciles", "tensiones del equipo", "cultura", "cambio"],
+    "pasos": "Ronda de silencio → Ronda 1 (sin interrupciones) → Ronda 2 (responder) → Ronda 3 (integrar) → Cierre"
+  }
+]
