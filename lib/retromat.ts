@@ -20,13 +20,20 @@ const ACTIVITIES_PER_PHASE: Record<number, number> = {
 
 const STANDARD_PHASES: RetroPhase[] = [0, 1, 2, 3, 4]
 
-export function getActivitiesForRetro(form: RetroFormData, variant: number = 1): RetromatActivity[] {
+export function getActivitiesForRetro(
+  form: RetroFormData,
+  variant: number = 1,
+  seed: number = 0
+): RetromatActivity[] {
   const perPhase = ACTIVITIES_PER_PHASE[form.duracion] ?? 4
-  const offset = (variant - 1) * perPhase
+  // seed rota el punto de partida; variant 1 y 2 toman bloques consecutivos
+  const baseOffset = (seed % 4) * perPhase
+  const variantOffset = (variant - 1) * perPhase
 
-  return STANDARD_PHASES.flatMap(phase =>
-    ALL_ACTIVITIES
-      .filter(a => Number(a.phase) === phase)
-      .slice(offset, offset + perPhase)
-  )
+  return STANDARD_PHASES.flatMap(phase => {
+    const phaseActivities = ALL_ACTIVITIES.filter(a => Number(a.phase) === phase)
+    const total = phaseActivities.length
+    const start = (baseOffset + variantOffset) % Math.max(total - perPhase + 1, 1)
+    return phaseActivities.slice(start, start + perPhase)
+  })
 }

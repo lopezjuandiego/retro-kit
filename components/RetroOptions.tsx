@@ -78,11 +78,6 @@ export default function RetroOptions({ option1, option2, onReset }: Props) {
         </div>
       </div>
 
-      {/* Feedback — siempre visible, arriba del contenido */}
-      <div className="max-w-5xl mx-auto">
-        <FeedbackForm option1={option1} option2={option2} />
-      </div>
-
       {/* Content */}
       {view === 'option1' && (
         <div className="max-w-xl mx-auto">
@@ -117,6 +112,11 @@ export default function RetroOptions({ option1, option2, onReset }: Props) {
         >
           Imprimir / guardar PDF
         </button>
+      </div>
+
+      {/* Feedback */}
+      <div className="max-w-5xl mx-auto">
+        <FeedbackForm option1={option1} option2={option2} />
       </div>
     </div>
   )

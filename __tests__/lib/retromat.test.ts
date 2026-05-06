@@ -33,8 +33,8 @@ describe('getActivitiesForRetro', () => {
   })
 
   it('variant 2 retorna actividades distintas a variant 1', () => {
-    const v1 = getActivitiesForRetro(baseForm, 1)
-    const v2 = getActivitiesForRetro(baseForm, 2)
+    const v1 = getActivitiesForRetro(baseForm, 1, 0)
+    const v2 = getActivitiesForRetro(baseForm, 2, 0)
     const ids1 = v1.map(a => a.retromatId)
     const ids2 = v2.map(a => a.retromatId)
     const overlap = ids1.filter(id => ids2.includes(id))

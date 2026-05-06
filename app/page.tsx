@@ -18,17 +18,19 @@ export default function Home() {
     setLoading(true)
     setError(null)
 
+    const seed = Math.floor(Math.random() * 20)
+
     try {
       const [res1, res2] = await Promise.all([
         fetch('/api/generate', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ ...form, variant: 1 }),
+          body: JSON.stringify({ ...form, variant: 1, seed }),
         }),
         fetch('/api/generate', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ ...form, variant: 2 }),
+          body: JSON.stringify({ ...form, variant: 2, seed }),
         }),
       ])
 

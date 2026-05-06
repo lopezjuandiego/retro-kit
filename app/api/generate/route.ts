@@ -7,7 +7,7 @@ import type { RetroFormData } from '@/types'
 
 export async function POST(request: NextRequest) {
   const body = await request.json()
-  const { variant, ...form } = body as RetroFormData & { variant?: number }
+  const { variant, seed, ...form } = body as RetroFormData & { variant?: number; seed?: number }
 
   if (!form.tema?.trim() || !form.tipoEvento || !form.duracion || !form.tamañoEquipo) {
     return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 })
@@ -19,7 +19,8 @@ export async function POST(request: NextRequest) {
 
   try {
     const v = variant ?? 1
-    const activities = getActivitiesForRetro(form, v)
+    const s = seed ?? 0
+    const activities = getActivitiesForRetro(form, v, s)
     const structures = form.incluirLS ? getStructuresForRetro(form) : []
     const agenda = await generateRetroAgenda(form, activities, structures, v)
     return NextResponse.json(agenda)
