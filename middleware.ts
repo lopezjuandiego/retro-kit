@@ -1,6 +1,12 @@
 // middleware.ts
 import { NextRequest, NextResponse } from 'next/server'
 
+function isExpired(): boolean {
+  const expiresStr = process.env.ACCESS_EXPIRES
+  if (!expiresStr) return false
+  return new Date() > new Date(expiresStr)
+}
+
 function isValidSession(request: NextRequest): boolean {
   const session = request.cookies.get('retro-session')?.value?.trim() ?? ''
   const raw = process.env.ACCESS_PASSWORDS ?? ''
@@ -13,11 +19,19 @@ export function middleware(request: NextRequest) {
 
   if (
     pathname.startsWith('/login') ||
+    pathname.startsWith('/expired') ||
     pathname.startsWith('/api/login') ||
     pathname.startsWith('/_next') ||
     pathname === '/favicon.ico'
   ) {
     return NextResponse.next()
+  }
+
+  if (isExpired()) {
+    if (pathname.startsWith('/api/')) {
+      return NextResponse.json({ error: 'Acceso vencido' }, { status: 403 })
+    }
+    return NextResponse.redirect(new URL('/expired', request.url))
   }
 
   if (pathname.startsWith('/api/')) {
