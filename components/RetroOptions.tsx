@@ -78,6 +78,11 @@ export default function RetroOptions({ option1, option2, onReset }: Props) {
         </div>
       </div>
 
+      {/* Feedback — siempre visible, arriba del contenido */}
+      <div className="max-w-5xl mx-auto">
+        <FeedbackForm option1={option1} option2={option2} />
+      </div>
+
       {/* Content */}
       {view === 'option1' && (
         <div className="max-w-xl mx-auto">
@@ -94,22 +99,15 @@ export default function RetroOptions({ option1, option2, onReset }: Props) {
       {view === 'compare' && (
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide bg-indigo-50 px-2.5 py-1 rounded-full">Opción 1</span>
-            </div>
+            <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide bg-indigo-50 px-2.5 py-1 rounded-full">Opción 1</span>
             <AgendaDetail agenda={option1} />
           </div>
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-violet-600 uppercase tracking-wide bg-violet-50 px-2.5 py-1 rounded-full">Opción 2</span>
-            </div>
+            <span className="text-xs font-semibold text-violet-600 uppercase tracking-wide bg-violet-50 px-2.5 py-1 rounded-full">Opción 2</span>
             <AgendaDetail agenda={option2} />
           </div>
         </div>
       )}
-
-      {/* Feedback */}
-      <FeedbackForm option1={option1} option2={option2} />
 
       {/* Print */}
       <div className="max-w-5xl mx-auto text-center print:hidden pt-2">
