@@ -4,15 +4,13 @@
 import { useState } from 'react'
 import RetroForm from '@/components/RetroForm'
 import RetroOptions from '@/components/RetroOptions'
-import RetroResult from '@/components/RetroResult'
 import type { RetroFormData, RetroAgenda } from '@/types'
 
-type Stage = 'form' | 'options' | 'result'
+type Stage = 'form' | 'options'
 
 export default function Home() {
   const [stage, setStage] = useState<Stage>('form')
   const [options, setOptions] = useState<[RetroAgenda, RetroAgenda] | null>(null)
-  const [selected, setSelected] = useState<RetroAgenda | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -53,21 +51,15 @@ export default function Home() {
     }
   }
 
-  function handleSelect(agenda: RetroAgenda) {
-    setSelected(agenda)
-    setStage('result')
-  }
-
   function handleReset() {
     setStage('form')
     setOptions(null)
-    setSelected(null)
     setError(null)
   }
 
   return (
     <main className="py-12 px-4">
-      <div className="max-w-3xl mx-auto mb-10 text-center">
+      <div className="max-w-5xl mx-auto mb-10 text-center">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">RetroKit</h1>
         <p className="text-gray-500 text-sm">
           Generador de retrospectivas y eventos colaborativos para facilitadores
@@ -82,18 +74,7 @@ export default function Home() {
       )}
 
       {stage === 'options' && options && (
-        <>
-          <RetroOptions option1={options[0]} option2={options[1]} onSelect={handleSelect} />
-          <div className="text-center mt-6">
-            <button onClick={handleReset} className="text-sm text-gray-400 hover:text-gray-600">
-              ← Volver al formulario
-            </button>
-          </div>
-        </>
-      )}
-
-      {stage === 'result' && selected && (
-        <RetroResult agenda={selected} onReset={handleReset} />
+        <RetroOptions option1={options[0]} option2={options[1]} onReset={handleReset} />
       )}
     </main>
   )

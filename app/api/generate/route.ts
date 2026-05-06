@@ -18,9 +18,10 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const activities = getActivitiesForRetro(form)
+    const v = variant ?? 1
+    const activities = getActivitiesForRetro(form, v)
     const structures = form.incluirLS ? getStructuresForRetro(form) : []
-    const agenda = await generateRetroAgenda(form, activities, structures, variant ?? 1)
+    const agenda = await generateRetroAgenda(form, activities, structures, v)
     return NextResponse.json(agenda)
   } catch (e) {
     const message = e instanceof Error ? e.message : 'Error desconocido'

@@ -32,6 +32,15 @@ describe('getActivitiesForRetro', () => {
     expect(short.length).toBeLessThan(long.length)
   })
 
+  it('variant 2 retorna actividades distintas a variant 1', () => {
+    const v1 = getActivitiesForRetro(baseForm, 1)
+    const v2 = getActivitiesForRetro(baseForm, 2)
+    const ids1 = v1.map(a => a.retromatId)
+    const ids2 = v2.map(a => a.retromatId)
+    const overlap = ids1.filter(id => ids2.includes(id))
+    expect(overlap.length).toBe(0)
+  })
+
   it('cada actividad tiene retromatId numérico', () => {
     const result = getActivitiesForRetro(baseForm)
     result.forEach(a => expect(typeof a.retromatId).toBe('number'))
