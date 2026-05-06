@@ -26,7 +26,8 @@ const PHASE_NAMES: Record<number, string> = {
 export function buildPrompt(
   form: RetroFormData,
   activities: RetromatActivity[],
-  structures: LiberatingStructure[]
+  structures: LiberatingStructure[],
+  variant: number = 1
 ): string {
   const activitiesByPhase = [0, 1, 2, 3, 4]
     .map(phase => {
@@ -41,8 +42,12 @@ export function buildPrompt(
     ? `\n\n### Técnicas de Estructuras Liberadoras disponibles:\n${structures.map(s => `- ${s.name}: ${s.summary} (${s.duration}) — Útil para: ${s.when_to_use.join(', ')}`).join('\n')}`
     : ''
 
-  return `Sos un experto en facilitación de retrospectivas ágiles y eventos colaborativos.
+  const variantInstruction = variant === 2
+    ? `\nIMPORTANTE: Esta es una agenda ALTERNATIVA. Elegí actividades diferentes a las que elegiría una primera propuesta obvia. Priorizá dinámicas más participativas, creativas o con mayor profundidad reflexiva.\n`
+    : ''
 
+  return `Sos un experto en facilitación de retrospectivas ágiles y eventos colaborativos.
+${variantInstruction}
 CONTEXTO DEL EQUIPO:
 - Tema/problema: ${form.tema}
 - Tipo de evento: ${TIPO_LABELS[form.tipoEvento]}
@@ -75,24 +80,23 @@ Respondé ÚNICAMENTE con un objeto JSON válido (sin texto adicional, sin bloqu
 export async function generateRetroAgenda(
   form: RetroFormData,
   activities: RetromatActivity[],
-  structures: LiberatingStructure[]
+  structures: LiberatingStructure[],
+  variant: number = 1
 ): Promise<RetroAgenda> {
   const client = new Anthropic()
 
   const message = await client.messages.create({
     model: 'claude-haiku-4-5-20251001',
     max_tokens: 1500,
-    messages: [{ role: 'user', content: buildPrompt(form, activities, structures) }],
+    messages: [{ role: 'user', content: buildPrompt(form, activities, structures, variant) }],
   })
 
-  const raw = message.content[0].type === 'text' ? message.content[0].text : ''
-
-  // Strip markdown code fences if the model wraps the JSON anyway
-  const text = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '').trim()
+  const text = message.content[0].type === 'text' ? message.content[0].text : ''
+  const cleaned = text.replace(/^```(?:json)?\n?/i, '').replace(/\n?```$/i, '').trim()
 
   try {
-    return JSON.parse(text) as RetroAgenda
+    return JSON.parse(cleaned) as RetroAgenda
   } catch {
-    throw new Error(`Respuesta inválida de Claude: ${raw.slice(0, 300)}`)
+    throw new Error(`Respuesta inválida de Claude: ${cleaned.slice(0, 300)}`)
   }
 }
