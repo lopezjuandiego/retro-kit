@@ -3,6 +3,7 @@
 
 import { useState } from 'react'
 import ActivityCard from './ActivityCard'
+import FeedbackForm from './FeedbackForm'
 import type { RetroAgenda } from '@/types'
 
 type View = 'option1' | 'option2' | 'compare'
@@ -106,6 +107,9 @@ export default function RetroOptions({ option1, option2, onReset }: Props) {
           </div>
         </div>
       )}
+
+      {/* Feedback */}
+      <FeedbackForm option1={option1} option2={option2} />
 
       {/* Print */}
       <div className="max-w-5xl mx-auto text-center print:hidden pt-2">
