@@ -20,7 +20,10 @@ export default function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      if (!res.ok) throw new Error('Error al generar la agenda. Intentá de nuevo.')
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error ?? 'Error al generar la agenda. Intentá de nuevo.')
+      }
       const data: RetroAgenda = await res.json()
       setAgenda(data)
     } catch (e) {

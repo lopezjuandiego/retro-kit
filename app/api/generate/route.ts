@@ -12,10 +12,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 })
   }
 
-  const activities = getActivitiesForRetro(form)
-  const structures = form.incluirLS ? getStructuresForRetro(form) : []
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return NextResponse.json({ error: 'API key no configurada en el servidor' }, { status: 500 })
+  }
 
-  const agenda = await generateRetroAgenda(form, activities, structures)
-
-  return NextResponse.json(agenda)
+  try {
+    const activities = getActivitiesForRetro(form)
+    const structures = form.incluirLS ? getStructuresForRetro(form) : []
+    const agenda = await generateRetroAgenda(form, activities, structures)
+    return NextResponse.json(agenda)
+  } catch (e) {
+    const message = e instanceof Error ? e.message : 'Error desconocido'
+    return NextResponse.json({ error: message }, { status: 500 })
+  }
 }
