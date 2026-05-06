@@ -6,7 +6,6 @@ export async function POST(request: NextRequest) {
 
   const raw = process.env.ACCESS_PASSWORDS ?? ''
   const validPasswords = raw.split(',').map(p => p.trim()).filter(Boolean)
-
   const trimmed = (password ?? '').trim()
 
   if (!trimmed || !validPasswords.includes(trimmed)) {
@@ -18,7 +17,7 @@ export async function POST(request: NextRequest) {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 14, // 14 días
+    maxAge: 60 * 60 * 24 * 15, // 15 días
     path: '/',
   })
   return response
