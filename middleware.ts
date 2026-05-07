@@ -1,6 +1,19 @@
 // middleware.ts
 import { NextRequest, NextResponse } from 'next/server'
 
+const PUBLIC_PATHS = [
+  '/login',
+  '/submit',
+  '/api/login',
+  '/api/submit',
+  '/api/approve',
+  '/api/reject',
+]
+
+function isPublicPath(pathname: string): boolean {
+  return PUBLIC_PATHS.some(p => pathname.startsWith(p))
+}
+
 function isValidSession(request: NextRequest): boolean {
   const session = request.cookies.get('retro-session')?.value?.trim() ?? ''
   const raw = process.env.ACCESS_PASSWORDS ?? ''
@@ -12,8 +25,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   if (
-    pathname.startsWith('/login') ||
-    pathname.startsWith('/api/login') ||
+    isPublicPath(pathname) ||
     pathname.startsWith('/_next') ||
     pathname === '/favicon.ico'
   ) {
