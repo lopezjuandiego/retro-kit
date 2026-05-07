@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               href="/submit"
               className="text-xs text-gray-400 hover:text-indigo-600 transition-colors"
             >
-              Contribuir una técnica
+              Contribuir con una retro o actividad
             </a>
             <span className="text-gray-200">·</span>
             <a

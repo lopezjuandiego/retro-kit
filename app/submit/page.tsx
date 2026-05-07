@@ -76,12 +76,13 @@ export default function SubmitPage() {
           <p className="text-sm text-gray-500 mt-1">
             Compartí una técnica de retro con la comunidad. Si se aprueba, aparecerá con tu nombre.
           </p>
+          <p className="text-xs text-gray-400 mt-1">* Todos los campos son obligatorios</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Tu nombre</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Tu nombre<span className="text-red-500 ml-0.5">*</span></label>
               <input
                 required
                 type="text"
@@ -92,7 +93,7 @@ export default function SubmitPage() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Tu email</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Tu email<span className="text-red-500 ml-0.5">*</span></label>
               <input
                 required
                 type="email"
@@ -105,7 +106,7 @@ export default function SubmitPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Nombre de la técnica</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Nombre de la técnica<span className="text-red-500 ml-0.5">*</span></label>
             <input
               required
               type="text"
@@ -118,7 +119,7 @@ export default function SubmitPage() {
 
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Fase de la retro</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Fase de la retro<span className="text-red-500 ml-0.5">*</span></label>
               <select
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 value={form.phase}
@@ -130,7 +131,7 @@ export default function SubmitPage() {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Duración estimada</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Duración estimada<span className="text-red-500 ml-0.5">*</span></label>
               <input
                 required
                 type="text"
@@ -143,7 +144,7 @@ export default function SubmitPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Resumen breve</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Resumen breve<span className="text-red-500 ml-0.5">*</span></label>
             <input
               required
               type="text"
@@ -155,7 +156,7 @@ export default function SubmitPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Descripción completa</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Descripción completa<span className="text-red-500 ml-0.5">*</span></label>
             <textarea
               required
               rows={4}
@@ -167,7 +168,7 @@ export default function SubmitPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Cómo facilitar</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">Cómo facilitar<span className="text-red-500 ml-0.5">*</span></label>
             <textarea
               required
               rows={3}
