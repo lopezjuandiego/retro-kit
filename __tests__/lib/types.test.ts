@@ -36,3 +36,24 @@ describe('Forma de RetroAgenda', () => {
     expect(agenda.agenda[0].fuente).toBe('retromat')
   })
 })
+
+describe('Forma de CommunityActivity', () => {
+  it('acepta todos los campos requeridos', () => {
+    const activity: import('@/types').CommunityActivity = {
+      id: 'abc-123',
+      created_at: '2026-05-07T00:00:00Z',
+      author_name: 'Juancito',
+      author_email: 'juancito@mail.com',
+      activity_name: 'El Semáforo',
+      summary: 'Muestra el estado de cada uno',
+      description: 'Verde ok, amarillo dudas, rojo bloqueado.',
+      phase: 0,
+      duration: '5 min',
+      how_to_facilitate: 'Pedir color y motivo.',
+      status: 'pending',
+      approval_token: 'token-xyz',
+    }
+    expect(activity.status).toBe('pending')
+    expect(activity.phase).toBe(0)
+  })
+})

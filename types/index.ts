@@ -48,3 +48,30 @@ export interface RetroAgenda {
   agenda: AgendaItem[]
   nota_facilitador: string
 }
+
+export interface CommunityActivity {
+  id: string
+  created_at: string
+  author_name: string
+  author_email: string
+  activity_name: string
+  summary: string
+  description: string
+  phase: 0 | 1 | 2 | 3 | 4
+  duration: string
+  how_to_facilitate: string
+  status: 'pending' | 'approved' | 'rejected'
+  approved_at?: string
+  approval_token: string
+}
+
+export interface SubmissionFormData {
+  author_name: string
+  author_email: string
+  activity_name: string
+  summary: string
+  description: string
+  phase: 0 | 1 | 2 | 3 | 4
+  duration: string
+  how_to_facilitate: string
+}
